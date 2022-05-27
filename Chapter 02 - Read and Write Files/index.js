@@ -18,15 +18,15 @@ fs.writeFile(
   err => {
     if (err) throw err;
     console.log('Write Complete');
-  }
-);
 
-fs.appendFile(
-  path.join(__dirname, 'files', 'test.txt'),
-  'Testing text',
-  err => {
-    if (err) throw err;
-    console.log('Append Complete');
+    fs.appendFile(
+      path.join(__dirname, 'files', 'reply.txt'),
+      '\n\nYes it is.',
+      err => {
+        if (err) throw err;
+        console.log('Append Complete');
+      }
+    );
   }
 );
 
