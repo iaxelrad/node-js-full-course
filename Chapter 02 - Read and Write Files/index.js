@@ -17,7 +17,16 @@ fs.writeFile(
   'Nice to meet you',
   err => {
     if (err) throw err;
-    console.log('data written to file');
+    console.log('Write Complete');
+  }
+);
+
+fs.appendFile(
+  path.join(__dirname, 'files', 'test.txt'),
+  'Testing text',
+  err => {
+    if (err) throw err;
+    console.log('Append Complete');
   }
 );
 
