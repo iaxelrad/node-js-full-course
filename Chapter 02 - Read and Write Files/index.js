@@ -25,6 +25,15 @@ fs.writeFile(
       err => {
         if (err) throw err;
         console.log('Append Complete');
+
+        fs.rename(
+          path.join(__dirname, 'files', 'reply.txt'),
+          'newReply.txt',
+          err => {
+            if (err) throw err;
+            console.log('Rename Complete');
+          }
+        );
       }
     );
   }
